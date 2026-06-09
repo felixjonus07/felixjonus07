@@ -85,6 +85,20 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// Split Hero Name into Character Spans for individual animations
+const heroName = document.getElementById('hero-name');
+if (heroName) {
+  const nameText = heroName.textContent;
+  heroName.innerHTML = '';
+  [...nameText].forEach((char, index) => {
+    const span = document.createElement('span');
+    span.textContent = char === ' ' ? '\u00A0' : char;
+    span.className = 'char';
+    span.style.setProperty('--char-index', index);
+    heroName.appendChild(span);
+  });
+}
+
 // Typewriter Effect
 const typewriterSpan = document.querySelector('.typewriter');
 if (typewriterSpan) {
