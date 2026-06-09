@@ -5,9 +5,9 @@
   --font-mono: 'Fira Code', monospace;
 
   /* HSL Color Palette (Dark Theme Default) */
-  --bg-color: #080c14;
-  --bg-card: rgba(13, 20, 35, 0.65);
-  --bg-alt: #0a0f1d;
+  --bg-color: #050811;
+  --bg-card: rgba(10, 16, 30, 0.7);
+  --bg-alt: #070b16;
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
   --accent-blue: #3b82f6;
@@ -18,11 +18,11 @@
   --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
   --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
   --gradient-rainbow: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
-  --border-color: rgba(255, 255, 255, 0.06);
-  --border-hover: rgba(59, 130, 246, 0.35);
-  --glow-shadow: 0 0 25px rgba(59, 130, 246, 0.25);
-  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  --border-color: rgba(255, 255, 255, 0.05);
+  --border-hover: rgba(59, 130, 246, 0.4);
+  --glow-shadow: 0 0 30px rgba(139, 92, 246, 0.3);
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 10px 20px -3px rgba(0, 0, 0, 0.5);
   
   --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -30,7 +30,7 @@
 /* Light Theme Variables */
 .light-theme {
   --bg-color: #f8fafc;
-  --bg-card: rgba(255, 255, 255, 0.8);
+  --bg-card: rgba(255, 255, 255, 0.85);
   --bg-alt: #f1f5f9;
   --text-primary: #0f172a;
   --text-secondary: #64748b;
@@ -42,8 +42,53 @@
   --gradient-primary: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
   --gradient-secondary: linear-gradient(135deg, #7c3aed 0%, #db2777 100%);
   --border-color: rgba(15, 23, 42, 0.08);
-  --border-hover: rgba(37, 99, 235, 0.25);
-  --glow-shadow: 0 0 25px rgba(37, 99, 235, 0.12);
+  --border-hover: rgba(37, 99, 235, 0.35);
+  --glow-shadow: 0 0 30px rgba(37, 99, 235, 0.15);
+}
+
+/* Custom Cursor */
+@media (min-width: 992px) {
+  body {
+    cursor: none;
+  }
+  
+  a, button, .social-icon, .filter-btn, .skill-item, .stat-card {
+    cursor: none !important;
+  }
+
+  #custom-cursor {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--accent-blue);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    transition: width 0.2s, height 0.2s, background-color 0.2s, border-color 0.2s;
+    transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    mix-blend-mode: difference;
+  }
+
+  #custom-cursor-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--accent-pink);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+  }
+
+  /* Hover state for custom cursor */
+  .cursor-hover #custom-cursor {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: var(--accent-pink);
+  }
 }
 
 /* Base Styles */
@@ -116,13 +161,13 @@ body::before {
   position: absolute;
   border-radius: 50%;
   filter: blur(140px);
-  opacity: 0.18;
+  opacity: 0.22;
   mix-blend-mode: screen;
   animation: floatOrb 25s infinite alternate ease-in-out;
 }
 
 .light-theme .orb {
-  opacity: 0.08;
+  opacity: 0.1;
   mix-blend-mode: multiply;
 }
 
@@ -248,12 +293,12 @@ header {
   z-index: 100;
   backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-color);
-  background: rgba(8, 12, 20, 0.75);
+  background: rgba(5, 8, 17, 0.8);
   transition: var(--transition);
 }
 
 .light-theme header {
-  background: rgba(248, 250, 252, 0.75);
+  background: rgba(248, 250, 252, 0.85);
 }
 
 .nav-container {
@@ -348,18 +393,20 @@ header {
   cursor: pointer;
 }
 
-/* Card Glow Effect (Glassmorphism) */
+/* Card Glow Effect (Glassmorphism with perspective for 3D card tilt) */
 .card-glow {
   background: var(--bg-card);
   backdrop-filter: blur(20px);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 2.2rem;
-  transition: var(--transition);
+  transition: transform 0.15s ease-out, border-color 0.4s, box-shadow 0.4s;
   box-shadow: var(--shadow-sm);
   position: relative;
   overflow: hidden;
   z-index: 10;
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .card-glow::before {
@@ -376,7 +423,6 @@ header {
 .card-glow:hover {
   border-color: var(--border-hover);
   box-shadow: var(--glow-shadow), var(--shadow-md);
-  transform: translateY(-6px);
 }
 
 /* Hero Section */
@@ -494,6 +540,7 @@ header {
   overflow: hidden;
   font-family: var(--font-mono);
   font-size: 0.95rem;
+  transition: transform 0.15s ease-out;
 }
 
 .code-header {

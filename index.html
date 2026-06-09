@@ -21,6 +21,10 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark-theme">
+  <!-- Interactive Cursor Follower -->
+  <div id="custom-cursor"></div>
+  <div id="custom-cursor-dot"></div>
+
   <!-- Interactive Particles Canvas -->
   <canvas id="particles-canvas"></canvas>
 
@@ -76,7 +80,7 @@
           Building <span class="typewriter" data-words='["Scalable Web Apps", "AI & RAG Solutions", "DevOps Pipelines", "Rust Core Architectures"]'>Scalable Web Apps</span>
         </h2>
         <p class="hero-description">
-          A forward-thinking <strong>B.Tech AI & Data Science</strong> student bridging robust software engineering, cloud infrastructures, and high-performance computation.
+          A forward-thinking B.Tech AI & Data Science student bridging robust software engineering, cloud infrastructures, and high-performance computation.
         </p>
         <div class="hero-ctas">
           <a href="#projects" class="btn-primary glow-button">Explore Projects <i class="fa-solid fa-arrow-right"></i></a>
@@ -86,12 +90,13 @@
           <a href="mailto:felixjonus07@gmail.com" class="social-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
           <a href="https://github.com/felixjonus07" target="_blank" rel="noopener" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
           <a href="tel:+919025059194" class="social-icon" title="Phone"><i class="fa-solid fa-phone"></i></a>
-          <a href="https://leetcode.com/felixjonus07" target="_blank" rel="noopener" class="social-icon" title="LeetCode"><i class="fa-solid fa-code"></i></a>
+          <a href="https://leetcode.com/u/felixjonus_07" target="_blank" rel="noopener" class="social-icon" title="LeetCode"><i class="fa-solid fa-code"></i></a>
+          <a href="https://codolio.com/profile/kit28ada044" target="_blank" rel="noopener" class="social-icon" title="Codolio"><i class="fa-solid fa-chart-simple"></i></a>
         </div>
       </div>
       
       <div class="hero-visual scroll-reveal delay-1">
-        <div class="code-window">
+        <div class="code-window tilt-target">
           <div class="code-header">
             <span class="dot red"></span>
             <span class="dot yellow"></span>
@@ -113,7 +118,7 @@
         skills: <span class="type">vec!</span>[<span class="string">"Rust"</span>, <span class="string">"MERN"</span>, <span class="string">"Django"</span>, <span class="string">"AWS"</span>],
         leetcode_global_top: <span class="string">"13%"</span>,
     };
-    <span class="type">println!</span>(<span class="string">"🚀 Architecting next-gen systems..."</span>);
+    <span class="type">println!</span>(<span class="string">"Architecting next-gen systems..."</span>);
 }</code></pre>
           </div>
         </div>
@@ -129,7 +134,7 @@
         <h2 class="section-title">Academic Foundation</h2>
       </div>
       <div class="education-grid scroll-reveal">
-        <div class="edu-card card-glow">
+        <div class="edu-card card-glow tilt-target">
           <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
           <div class="edu-details">
             <span class="edu-duration">2024 – 2028</span>
@@ -165,7 +170,7 @@
       <div class="timeline">
         <div class="timeline-item scroll-reveal">
           <div class="timeline-marker"></div>
-          <div class="timeline-content card-glow">
+          <div class="timeline-content card-glow tilt-target">
             <span class="timeline-date">Dec 2025 – Present</span>
             <h3>Freelance Full-Stack Developer</h3>
             <p class="timeline-company"><i class="fa-solid fa-briefcase"></i> Self-Employed</p>
@@ -178,7 +183,7 @@
 
         <div class="timeline-item scroll-reveal delay-1">
           <div class="timeline-marker"></div>
-          <div class="timeline-content card-glow">
+          <div class="timeline-content card-glow tilt-target">
             <span class="timeline-date">May 2026</span>
             <h3>AWS & DevOps Intern</h3>
             <p class="timeline-company"><i class="fa-solid fa-building"></i> Finest Coder</p>
@@ -207,7 +212,7 @@
       </div>
       <div class="projects-grid">
         <!-- Project 1 -->
-        <div class="project-card card-glow scroll-reveal" data-category="ai">
+        <div class="project-card card-glow scroll-reveal tilt-target" data-category="ai">
           <div class="project-image">
             <div class="project-icon-box"><i class="fa-solid fa-seedling"></i></div>
           </div>
@@ -228,7 +233,7 @@
         </div>
 
         <!-- Project 2 -->
-        <div class="project-card card-glow scroll-reveal delay-1" data-category="systems">
+        <div class="project-card card-glow scroll-reveal delay-1 tilt-target" data-category="systems">
           <div class="project-image">
             <div class="project-icon-box"><i class="fa-solid fa-server"></i></div>
           </div>
@@ -248,7 +253,7 @@
         </div>
 
         <!-- Project 3 -->
-        <div class="project-card card-glow scroll-reveal delay-2" data-category="ai">
+        <div class="project-card card-glow scroll-reveal delay-2 tilt-target" data-category="ai">
           <div class="project-image">
             <div class="project-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
           </div>
@@ -269,7 +274,7 @@
         </div>
 
         <!-- Project 4 -->
-        <div class="project-card card-glow scroll-reveal" data-category="ai">
+        <div class="project-card card-glow scroll-reveal tilt-target" data-category="ai">
           <div class="project-image">
             <div class="project-icon-box"><i class="fa-solid fa-truck-ramp-box"></i></div>
           </div>
@@ -289,7 +294,7 @@
         </div>
 
         <!-- Project 5 -->
-        <div class="project-card card-glow scroll-reveal delay-1" data-category="web">
+        <div class="project-card card-glow scroll-reveal delay-1 tilt-target" data-category="web">
           <div class="project-image">
             <div class="project-icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
           </div>
@@ -320,7 +325,7 @@
         <h2 class="section-title">Technical Skill Matrix</h2>
       </div>
       <div class="skills-wrapper">
-        <div class="skills-category card-glow scroll-reveal">
+        <div class="skills-category card-glow scroll-reveal tilt-target">
           <h3><i class="fa-solid fa-code"></i> Languages</h3>
           <div class="skills-list">
             <div class="skill-item"><span>C</span></div>
@@ -333,7 +338,7 @@
           </div>
         </div>
 
-        <div class="skills-category card-glow scroll-reveal delay-1">
+        <div class="skills-category card-glow scroll-reveal delay-1 tilt-target">
           <h3><i class="fa-solid fa-layer-group"></i> Frameworks & Libs</h3>
           <div class="skills-list">
             <div class="skill-item"><span>React.js</span></div>
@@ -344,7 +349,7 @@
           </div>
         </div>
 
-        <div class="skills-category card-glow scroll-reveal delay-2">
+        <div class="skills-category card-glow scroll-reveal delay-2 tilt-target">
           <h3><i class="fa-solid fa-database"></i> Databases</h3>
           <div class="skills-list">
             <div class="skill-item"><span>MongoDB</span></div>
@@ -352,7 +357,7 @@
           </div>
         </div>
 
-        <div class="skills-category card-glow scroll-reveal">
+        <div class="skills-category card-glow scroll-reveal tilt-target">
           <h3><i class="fa-solid fa-gears"></i> DevOps & Tools</h3>
           <div class="skills-list">
             <div class="skill-item"><span>AWS Cloud</span></div>
@@ -375,7 +380,7 @@
         <h2 class="section-title">Competitive Programming</h2>
       </div>
       <div class="stats-grid">
-        <div class="stat-card card-glow LeetCode scroll-reveal">
+        <a href="https://leetcode.com/u/felixjonus_07" target="_blank" rel="noopener" class="stat-card card-glow LeetCode scroll-reveal tilt-target" style="text-decoration: none; display: block;">
           <div class="stat-header">
             <h3>LeetCode</h3>
             <span class="stat-badge">Top 13% Globally</span>
@@ -389,9 +394,9 @@
             <p><span><i class="fa-solid fa-award"></i> Badges:</span> <strong>3</strong></p>
             <p><span><i class="fa-solid fa-trophy"></i> Highest Rank:</span> <strong>2245</strong></p>
           </div>
-        </div>
+        </a>
 
-        <div class="stat-card card-glow CodeChef scroll-reveal delay-1">
+        <a href="https://codolio.com/profile/kit28ada044" target="_blank" rel="noopener" class="stat-card card-glow CodeChef scroll-reveal delay-1 tilt-target" style="text-decoration: none; display: block;">
           <div class="stat-header">
             <h3>CodeChef</h3>
             <span class="stat-badge">2 Star</span>
@@ -405,10 +410,10 @@
             <p><span><i class="fa-solid fa-globe"></i> Global Rank:</span> <strong>25,683</strong></p>
             <p><span><i class="fa-solid fa-trophy"></i> Highest Rank:</span> <strong>400</strong></p>
           </div>
-        </div>
+        </a>
       </div>
 
-      <div class="certifications-box card-glow scroll-reveal">
+      <div class="certifications-box card-glow scroll-reveal tilt-target">
         <h3>Certifications & Courses</h3>
         <div class="cert-grid">
           <div class="cert-item"><i class="fa-solid fa-certificate"></i> Hackerrank - Python basics (2024)</div>
@@ -429,37 +434,37 @@
         <h2 class="section-title">Hackathon Victories</h2>
       </div>
       <div class="achievements-grid">
-        <div class="ach-card card-glow scroll-reveal">
+        <div class="ach-card card-glow scroll-reveal tilt-target">
           <span class="ach-rank rank-1"><i class="fa-solid fa-trophy"></i> 1st</span>
           <h4>Codewars 2.0</h4>
           <p>Park Institutions</p>
         </div>
-        <div class="ach-card card-glow scroll-reveal delay-1">
+        <div class="ach-card card-glow scroll-reveal delay-1 tilt-target">
           <span class="ach-rank rank-1"><i class="fa-solid fa-trophy"></i> 1st</span>
           <h4>Code Xtream</h4>
           <p>KIT CBE</p>
         </div>
-        <div class="ach-card card-glow scroll-reveal delay-2">
+        <div class="ach-card card-glow scroll-reveal delay-2 tilt-target">
           <span class="ach-rank rank-1"><i class="fa-solid fa-trophy"></i> 1st</span>
           <h4>Hacksmart</h4>
           <p>KIT CBE</p>
         </div>
-        <div class="ach-card card-glow scroll-reveal">
+        <div class="ach-card card-glow scroll-reveal tilt-target">
           <span class="ach-rank rank-1"><i class="fa-solid fa-trophy"></i> 1st</span>
           <h4>Web Wars</h4>
           <p>Hindustan Institutions</p>
         </div>
-        <div class="ach-card card-glow scroll-reveal delay-1">
+        <div class="ach-card card-glow scroll-reveal delay-1 tilt-target">
           <span class="ach-rank rank-1"><i class="fa-solid fa-trophy"></i> 1st</span>
           <h4>Web Wizards</h4>
           <p>RVS Institutions</p>
         </div>
-        <div class="ach-card card-glow scroll-reveal delay-2">
+        <div class="ach-card card-glow scroll-reveal delay-2 tilt-target">
           <span class="ach-rank rank-2"><i class="fa-solid fa-trophy"></i> 2nd</span>
           <h4>Krypto Bytes</h4>
           <p>Ramakrishna Institutions</p>
         </div>
-        <div class="ach-card card-glow scroll-reveal">
+        <div class="ach-card card-glow scroll-reveal tilt-target">
           <span class="ach-rank rank-3"><i class="fa-solid fa-trophy"></i> 3rd</span>
           <h4>Hack the Rucks 2.0</h4>
           <p>Amrita University</p>
@@ -476,17 +481,17 @@
         <h2 class="section-title">Volunteering & Leadership</h2>
       </div>
       <div class="volunteer-grid">
-        <div class="vol-card card-glow scroll-reveal">
+        <div class="vol-card card-glow scroll-reveal tilt-target">
           <div class="vol-icon-wrapper"><i class="fa-solid fa-users"></i></div>
           <h4>Plagiarism Awareness</h4>
           <p>Conducted plagiarism awareness program for junior (1st year) students.</p>
         </div>
-        <div class="vol-card card-glow scroll-reveal delay-1">
+        <div class="vol-card card-glow scroll-reveal delay-1 tilt-target">
           <div class="vol-icon-wrapper"><i class="fa-solid fa-chalkboard-user"></i></div>
           <h4>Peer Teaching</h4>
           <p>Taught C++, GitHub, and Competitive Programming basics to junior students with hands-on practice.</p>
         </div>
-        <div class="vol-card card-glow scroll-reveal delay-2">
+        <div class="vol-card card-glow scroll-reveal delay-2 tilt-target">
           <div class="vol-icon-wrapper"><i class="fa-solid fa-calendar-check"></i></div>
           <h4>UDHAYAM Organizing</h4>
           <p>Coordinated symposium events during college cultural event UDHAYAM.</p>

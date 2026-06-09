@@ -124,12 +124,84 @@ if (typewriterSpan) {
   });
 }
 
-// Particle System
+// Global mouse tracker for particles and custom cursor
+const mouse = {
+  x: null,
+  y: null,
+  targetX: null,
+  targetY: null,
+  radius: 120
+};
+
+window.addEventListener('mousemove', (e) => {
+  mouse.targetX = e.clientX;
+  mouse.targetY = e.clientY;
+});
+
+// Smooth cursor follow mechanism (Lerp)
+const cursor = document.getElementById('custom-cursor');
+const cursorDot = document.getElementById('custom-cursor-dot');
+let cursorX = 0, cursorY = 0;
+let dotX = 0, dotY = 0;
+
+function updateCursor() {
+  if (mouse.targetX !== null && cursor && cursorDot) {
+    // Lerp outer cursor
+    cursorX += (mouse.targetX - cursorX) * 0.12;
+    cursorY += (mouse.targetY - cursorY) * 0.12;
+    cursor.style.left = `${cursorX}px`;
+    cursor.style.top = `${cursorY}px`;
+
+    // Lerp inner dot (slightly faster)
+    dotX += (mouse.targetX - dotX) * 0.3;
+    dotY += (mouse.targetY - dotY) * 0.3;
+    cursorDot.style.left = `${dotX}px`;
+    cursorDot.style.top = `${dotY}px`;
+    
+    // Assign mouse current coordinates to mouse object for particles
+    mouse.x = dotX;
+    mouse.y = dotY;
+  }
+  requestAnimationFrame(updateCursor);
+}
+requestAnimationFrame(updateCursor);
+
+// Add custom hover events for cursor expanding
+const interactiveElements = document.querySelectorAll('a, button, .social-icon, .filter-btn, .skill-item, .stat-card');
+interactiveElements.forEach(el => {
+  el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+  el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+});
+
+// 3D Card Tilt Effect
+const tiltElements = document.querySelectorAll('.tilt-target');
+tiltElements.forEach(card => {
+  card.addEventListener('mousemove', (e) => {
+    const rect = card.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    // Calculate rotation degree (max 8 degrees)
+    const rotateX = ((centerY - y) / centerY) * 8;
+    const rotateY = ((x - centerX) / centerX) * 8;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'rotateX(0deg) rotateY(0deg) translateY(0px)';
+  });
+});
+
+// Particle System with mouse repulsion physics
 const canvas = document.getElementById('particles-canvas');
 const ctx = canvas.getContext('2d');
 
 let particlesArray = [];
-const numberOfParticles = 45;
+const numberOfParticles = 55;
 
 // Set canvas dimensions
 function resizeCanvas() {
@@ -144,10 +216,12 @@ class Particle {
   constructor() {
     this.x = Math.random() * canvas.width;
     this.y = Math.random() * canvas.height;
-    this.size = Math.random() * 2 + 1;
-    this.speedX = Math.random() * 0.4 - 0.2;
-    this.speedY = Math.random() * 0.4 - 0.2;
-    this.opacity = Math.random() * 0.5 + 0.1;
+    this.baseX = this.x;
+    this.baseY = this.y;
+    this.size = Math.random() * 2 + 1.5;
+    this.speedX = Math.random() * 0.5 - 0.25;
+    this.speedY = Math.random() * 0.5 - 0.25;
+    this.opacity = Math.random() * 0.6 + 0.15;
   }
   update() {
     this.x += this.speedX;
@@ -156,6 +230,22 @@ class Particle {
     // Bounce off walls
     if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX;
     if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
+
+    // Mouse repulsion logic
+    if (mouse.x !== null) {
+      let dx = mouse.x - this.x;
+      let dy = mouse.y - this.y;
+      let distance = Math.sqrt(dx * dx + dy * dy);
+      if (distance < mouse.radius) {
+        let forceDirectionX = dx / distance;
+        let forceDirectionY = dy / distance;
+        let maxForce = (mouse.radius - distance) / mouse.radius;
+        let force = maxForce * 3.5; // repelling strength
+
+        this.x -= forceDirectionX * force;
+        this.y -= forceDirectionY * force;
+      }
+    }
   }
   draw() {
     const isDark = !document.body.classList.contains('light-theme');
@@ -190,7 +280,6 @@ const projectCards = document.querySelectorAll('.project-card');
 
 filterButtons.forEach(button => {
   button.addEventListener('click', () => {
-    // Remove active class from all buttons
     filterButtons.forEach(btn => btn.classList.remove('active'));
     button.classList.add('active');
 
@@ -226,7 +315,6 @@ const observer = new IntersectionObserver((entries, observer) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       entry.target.classList.add('active-reveal');
-      // Once revealed, no need to observe again
       observer.unobserve(entry.target);
     }
   });

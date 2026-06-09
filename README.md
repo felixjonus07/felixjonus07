@@ -1,4 +1,4 @@
-<h1 align="center">✨ Felix Jonus I ✨</h1>
+<h1 align="center">Felix Jonus I</h1>
 <p align="center">
   <b>B.Tech in Artificial Intelligence & Data Science Student | Full-Stack Developer | DevOps Enthusiast</b>
 </p>
@@ -15,15 +15,15 @@
 
 ---
 
-## ⚡ Quick Overview
+## Quick Overview
 
-- 🎓 **Education:** 2nd Year B.Tech AI & Data Science student at **KIT** (CGPA: **8.13/10.0**).
-- 💼 **Experience:** Completed **5 freelance projects** spanning MERN, Django, and Rust, and an **AWS/DevOps internship** with hands-on EC2, S3, IAM, VPC experience.
-- 🚀 **Core Interests:** Cloud Architecture, Automated AI Workflows, Intrusion Detection Systems, and Rust systems programming.
+- **Education:** 2nd Year B.Tech AI & Data Science student at KIT (CGPA: 8.13/10.0).
+- **Experience:** Completed 5 freelance projects spanning MERN, Django, and Rust, and an AWS/DevOps internship with hands-on EC2, S3, IAM, VPC experience.
+- **Core Interests:** Cloud Architecture, Automated AI Workflows, Intrusion Detection Systems, and Rust systems programming.
 
 ---
 
-## 🛠️ Tech Stack & Skills
+## Tech Stack & Skills
 
 <table>
   <tr>
@@ -69,42 +69,42 @@
 
 ---
 
-## 🚀 Projects
+## Projects
 
-* 🌾 **Precision Farming Assistant** | `React` `N8N` `MongoDB` `Django`
+* **Precision Farming Assistant** | `React` `N8N` `MongoDB` `Django`
   * Deployed a RAG-based farming query agent leveraging N8N workflows for real-time agricultural data preprocessing and conversational insights.
-* ⚡ **Cheap API** | `Rust` `MongoDB`
+* **Cheap API** | `Rust` `MongoDB`
   * Programmed open-source Python and Node.js wrapper SDKs backed by a high-performance Rust caching layer and Quota Shield™ tracking tools.
-* 🛡️ **AI-IDS (Intrusion Detection System)** | `XGBoost` `MongoDB` `React`
+* **AI-IDS (Intrusion Detection System)** | `XGBoost` `MongoDB` `React`
   * Constructed a dual-engine DDoS/MITM network threat scanner reporting threats live onto a dashboard.
-* 📦 **THISAI Logistics Engine** | `React` `Node.js` `Express` `Gemini AI`
+* **THISAI Logistics Engine** | `React` `Node.js` `Express` `Gemini AI`
   * Devised a weather-aware mesh router using Gemini for transparent burden and ETA calculations.
-* 🧙 **UDHAYAM Cultural Portal** | `React` `Next.js` `Express` `PostgreSQL`
-  * Engineered a high-throughput, Harry Potter-themed booking & payment portal serving **7,000+ attendees**.
+* **UDHAYAM Cultural Portal** | `React` `Next.js` `Express` `PostgreSQL`
+  * Engineered a high-throughput, Harry Potter-themed booking & payment portal serving 7,000+ attendees.
 
 ---
 
-## 📈 Competitive Programming & Certifications
+## Competitive Programming & Certifications
 
 <p align="left">
-  <img src="https://img.shields.io/badge/LeetCode-Max%20Rating%201705-FFA116?style=flat-square&logo=leetcode&logoColor=white" />
-  <img src="https://img.shields.io/badge/LeetCode-Top%2013%25-blue?style=flat-square&logo=leetcode" />
-  <img src="https://img.shields.io/badge/CodeChef-2%20Star%20(1519)-784421?style=flat-square&logo=codechef&logoColor=white" />
+  <a href="https://leetcode.com/u/felixjonus_07"><img src="https://img.shields.io/badge/LeetCode-Max%20Rating%201705-FFA116?style=flat-square&logo=leetcode&logoColor=white" /></a>
+  <a href="https://leetcode.com/u/felixjonus_07"><img src="https://img.shields.io/badge/LeetCode-Top%2013%25-blue?style=flat-square&logo=leetcode" /></a>
+  <a href="https://codolio.com/profile/kit28ada044"><img src="https://img.shields.io/badge/Codolio-Profile-8b5cf6?style=flat-square" /></a>
 </p>
 
-* **LeetCode:** 600+ solved problems. Top 13% globally. Highest contest rank: 2245.
-* **CodeChef:** 589 solved problems. Division 3 contest rank: 400.
+* **LeetCode:** 600+ solved problems. Top 13% globally. Highest contest rank: 2245. Profile link: [leetcode.com/u/felixjonus_07](https://leetcode.com/u/felixjonus_07)
+* **CodeChef:** 589 solved problems. Division 3 contest rank: 400. Profile via Codolio: [codolio.com/profile/kit28ada044](https://codolio.com/profile/kit28ada044)
 * **Certifications:** GUVI Big Data (2025), NPTEL DSA Design (2025), NPTEL Problem Solving in C (2025), Java Introduction (2023).
 
 ---
 
-## 🏆 Key Achievements
+## Key Achievements
 
-- 🥇 **1st Place** — Codewars 2.0 Hackathon (Park Institutions)
-- 🥇 **1st Place** — Code Xtream Hackathon (KIT CBE)
-- 🥇 **1st Place** — Hacksmart Hackathon (KIT CBE)
-- 🥇 **1st Place** — Web Wars Event (Hindustan Institutions)
-- 🥇 **1st Place** — Web Wizards Hackathon (RVS Institutions)
+- **1st Place** — Codewars 2.0 Hackathon (Park Institutions)
+- **1st Place** — Code Xtream Hackathon (KIT CBE)
+- **1st Place** — Hacksmart Hackathon (KIT CBE)
+- **1st Place** — Web Wars Event (Hindustan Institutions)
+- **1st Place** — Web Wizards Hackathon (RVS Institutions)
 
 ---
 
