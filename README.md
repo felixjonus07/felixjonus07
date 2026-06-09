@@ -76,16 +76,74 @@
 
 ## Projects
 
-* **Precision Farming Assistant** | `React` `N8N` `MongoDB` `Django`
-  * Deployed a RAG-based farming query agent leveraging N8N workflows for real-time agricultural data preprocessing and conversational insights.
-* **Cheap API** | `Rust` `MongoDB`
-  * Programmed open-source Python and Node.js wrapper SDKs backed by a high-performance Rust caching layer and Quota Shield™ tracking tools.
-* **AI-IDS (Intrusion Detection System)** | `XGBoost` `MongoDB` `React`
-  * Constructed a dual-engine DDoS/MITM network threat scanner reporting threats live onto a dashboard.
-* **THISAI Logistics Engine** | `React` `Node.js` `Express` `Gemini AI`
-  * Devised a weather-aware mesh router using Gemini for transparent burden and ETA calculations.
-* **UDHAYAM Cultural Portal** | `React` `Next.js` `Express` `PostgreSQL`
-  * Engineered a high-throughput, Harry Potter-themed booking & payment portal serving 7,000+ attendees.
+<table>
+<tr>
+<td width="50%" valign="top">
+
+**Precision Farming Assistant**
+
+*RAG-based AI Farming Query Agent*
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![N8N](https://img.shields.io/badge/N8N-FF6C37?style=flat-square&logo=n8n&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white)
+
+Deployed a RAG-based farming query agent leveraging N8N workflows for real-time agricultural data preprocessing and conversational insights.
+
+---
+
+**AI-IDS**
+
+*Dual-Engine Intrusion Detection System*
+
+![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=flat-square&logo=data:image/svg+xml;base64,PHN2Zy8+&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+
+Constructed a dual-engine DDoS/MITM network threat scanner reporting threats live onto a real-time dashboard.
+
+---
+
+**THISAI Logistics Engine**
+
+*Weather-aware AI Mesh Router*
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![Gemini AI](https://img.shields.io/badge/Gemini_AI-8E75B2?style=flat-square&logo=google&logoColor=white)
+
+Devised a weather-aware mesh router using Gemini for transparent burden and ETA calculations.
+
+</td>
+<td width="50%" valign="top">
+
+**Cheap API**
+
+*High-Performance Rust Caching SDK*
+
+![Rust](https://img.shields.io/badge/Rust-000000?style=flat-square&logo=rust&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=flat-square&logo=mongodb&logoColor=white)
+
+Programmed open-source Python and Node.js wrapper SDKs backed by a high-performance Rust caching layer and Quota Shield™ tracking tools.
+
+---
+
+**UDHAYAM Cultural Portal**
+
+*High-Throughput Booking & Payment Portal*
+
+![React](https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=flat-square&logo=nextdotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+
+Engineered a high-throughput, Harry Potter-themed booking & payment portal serving 7,000+ attendees.
+
+</td>
+</tr>
+</table>
 
 ---
 
