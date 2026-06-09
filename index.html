@@ -12,7 +12,7 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
   
   <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,6 +21,9 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="dark-theme">
+  <!-- Interactive Particles Canvas -->
+  <canvas id="particles-canvas"></canvas>
+
   <!-- Glowing Background Orbs -->
   <div class="orb-container">
     <div class="orb orb-1"></div>
@@ -49,7 +52,7 @@
           <i class="fa-solid fa-moon"></i>
         </button>
         <a href="README.md" download class="btn-primary resume-btn">
-          <i class="fa-solid fa-download"></i> README
+          <i class="fa-solid fa-download"></i> Profile README
         </a>
       </div>
       <button class="mobile-nav-toggle" aria-label="Toggle Menu">
@@ -61,55 +64,56 @@
   <!-- Hero Section -->
   <section id="hero" class="hero-section">
     <div class="container">
-      <div class="hero-content">
+      <div class="hero-content scroll-reveal">
         <div class="badge-container">
           <span class="badge-pulse"></span>
-          <span class="hero-badge">Open for Freelance & Internships</span>
+          <span class="hero-badge">Ready for Freelance & AI/DevOps Roles</span>
         </div>
         <h1 class="hero-title">
-          Hi, I am <span class="gradient-text">Felix Jonus I</span>
+          Hi, I am <span class="gradient-text animate-gradient">Felix Jonus I</span>
         </h1>
         <h2 class="hero-subtitle">
-          Building <span class="typewriter" data-words='["Scalable Web Apps", "AI Solutions", "DevOps Pipelines", "Rust Services"]'>Scalable Web Apps</span>
+          Building <span class="typewriter" data-words='["Scalable Web Apps", "AI & RAG Solutions", "DevOps Pipelines", "Rust Core Architectures"]'>Scalable Web Apps</span>
         </h2>
         <p class="hero-description">
-          A passionate <strong>B.Tech AI & Data Science</strong> student at KIT (CGPA: 8.13). Bridging the gap between robust software engineering, cloud infrastructures, and intelligent data systems.
+          A forward-thinking <strong>B.Tech AI & Data Science</strong> student bridging robust software engineering, cloud infrastructures, and high-performance computation.
         </p>
         <div class="hero-ctas">
-          <a href="#projects" class="btn-primary">View My Work <i class="fa-solid fa-arrow-right"></i></a>
-          <a href="#contact" class="btn-secondary">Get In Touch</a>
+          <a href="#projects" class="btn-primary glow-button">Explore Projects <i class="fa-solid fa-arrow-right"></i></a>
+          <a href="#contact" class="btn-secondary">Let's Connect</a>
         </div>
         <div class="social-links">
           <a href="mailto:felixjonus07@gmail.com" class="social-icon" title="Email"><i class="fa-solid fa-envelope"></i></a>
           <a href="https://github.com/felixjonus07" target="_blank" rel="noopener" class="social-icon" title="GitHub"><i class="fa-brands fa-github"></i></a>
           <a href="tel:+919025059194" class="social-icon" title="Phone"><i class="fa-solid fa-phone"></i></a>
-          <a href="https://leetcode.com/felixjonus07" target="_blank" rel="noopener" class="social-icon" title="LeetCode"><i class="fa-code fa-solid"></i></a>
+          <a href="https://leetcode.com/felixjonus07" target="_blank" rel="noopener" class="social-icon" title="LeetCode"><i class="fa-solid fa-code"></i></a>
         </div>
       </div>
       
-      <div class="hero-visual">
+      <div class="hero-visual scroll-reveal delay-1">
         <div class="code-window">
           <div class="code-header">
             <span class="dot red"></span>
             <span class="dot yellow"></span>
             <span class="dot green"></span>
-            <span class="window-title">developer.js</span>
+            <span class="window-title">profile.rs</span>
           </div>
           <div class="code-body">
-            <pre><code><span class="keyword">const</span> developer = {
-  name: <span class="string">'Felix Jonus I'</span>,
-  role: <span class="string">'AI & DS Student / Fullstack Dev'</span>,
-  skills: [<span class="string">'MERN'</span>, <span class="string">'Rust'</span>, <span class="string">'Django'</span>, <span class="string">'AWS'</span>],
-  passion: <span class="string">'Problem Solving & Cloud Architecture'</span>,
-  leetcodeRating: <span class="number">1705</span>,
-  codechefRating: <span class="number">1519</span>,
-  freelanceProjects: <span class="number">5</span>,
-  academicCGPA: <span class="number">8.13</span>
-};
+            <pre><code><span class="keyword">pub struct</span> <span class="type">Developer</span> {
+    name: &<span class="keyword">str</span>,
+    education: &<span class="keyword">str</span>,
+    skills: <span class="type">Vec</span><&<span class="keyword">str</span>>,
+    leetcode_global_top: &<span class="keyword">str</span>,
+}
 
-<span class="comment">// Always learning, always building.</span>
-<span class="keyword">if</span> (developer.passionate) {
-  developer.buildNextBigThing();
+<span class="keyword">fn</span> <span class="type">main</span>() {
+    <span class="keyword">let</span> felix = <span class="type">Developer</span> {
+        name: <span class="string">"Felix Jonus I"</span>,
+        education: <span class="string">"B.Tech AI & DS (KIT)"</span>,
+        skills: <span class="type">vec!</span>[<span class="string">"Rust"</span>, <span class="string">"MERN"</span>, <span class="string">"Django"</span>, <span class="string">"AWS"</span>],
+        leetcode_global_top: <span class="string">"13%"</span>,
+    };
+    <span class="type">println!</span>(<span class="string">"🚀 Architecting next-gen systems..."</span>);
 }</code></pre>
           </div>
         </div>
@@ -120,18 +124,21 @@
   <!-- About / Education Section -->
   <section id="about" class="section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header scroll-reveal">
         <span class="section-tag">Education</span>
-        <h2 class="section-title">Academic Journey</h2>
+        <h2 class="section-title">Academic Foundation</h2>
       </div>
-      <div class="education-grid">
+      <div class="education-grid scroll-reveal">
         <div class="edu-card card-glow">
           <div class="edu-icon"><i class="fa-solid fa-graduation-cap"></i></div>
           <div class="edu-details">
             <span class="edu-duration">2024 – 2028</span>
             <h3>B.Tech. Artificial Intelligence & Data Science</h3>
             <p class="edu-college">KIT CBE, Coimbatore, Tamil Nadu, India</p>
-            <div class="cgpa-badge">CGPA: 8.13 / 10.0</div>
+            <div class="cgpa-wrapper">
+              <div class="cgpa-badge">CGPA: 8.13 / 10.0</div>
+              <div class="cgpa-bar-bg"><div class="cgpa-bar-fill" style="width: 81.3%;"></div></div>
+            </div>
             <div class="coursework">
               <h4>Key Coursework:</h4>
               <div class="course-tags">
@@ -151,12 +158,12 @@
   <!-- Experience Section -->
   <section id="experience" class="section bg-alt">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header scroll-reveal">
         <span class="section-tag">Career</span>
         <h2 class="section-title">Experience & Internships</h2>
       </div>
       <div class="timeline">
-        <div class="timeline-item">
+        <div class="timeline-item scroll-reveal">
           <div class="timeline-marker"></div>
           <div class="timeline-content card-glow">
             <span class="timeline-date">Dec 2025 – Present</span>
@@ -169,7 +176,7 @@
           </div>
         </div>
 
-        <div class="timeline-item">
+        <div class="timeline-item scroll-reveal delay-1">
           <div class="timeline-marker"></div>
           <div class="timeline-content card-glow">
             <span class="timeline-date">May 2026</span>
@@ -188,13 +195,19 @@
   <!-- Projects Section -->
   <section id="projects" class="section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header scroll-reveal">
         <span class="section-tag">Portfolio</span>
         <h2 class="section-title">Featured Projects</h2>
+        <div class="project-filters">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="ai">AI & RAG</button>
+          <button class="filter-btn" data-filter="web">Web Apps</button>
+          <button class="filter-btn" data-filter="systems">Systems & Tools</button>
+        </div>
       </div>
       <div class="projects-grid">
         <!-- Project 1 -->
-        <div class="project-card card-glow">
+        <div class="project-card card-glow scroll-reveal" data-category="ai">
           <div class="project-image">
             <div class="project-icon-box"><i class="fa-solid fa-seedling"></i></div>
           </div>
@@ -215,7 +228,7 @@
         </div>
 
         <!-- Project 2 -->
-        <div class="project-card card-glow">
+        <div class="project-card card-glow scroll-reveal delay-1" data-category="systems">
           <div class="project-image">
             <div class="project-icon-box"><i class="fa-solid fa-server"></i></div>
           </div>
@@ -235,7 +248,7 @@
         </div>
 
         <!-- Project 3 -->
-        <div class="project-card card-glow">
+        <div class="project-card card-glow scroll-reveal delay-2" data-category="ai">
           <div class="project-image">
             <div class="project-icon-box"><i class="fa-solid fa-shield-halved"></i></div>
           </div>
@@ -256,7 +269,7 @@
         </div>
 
         <!-- Project 4 -->
-        <div class="project-card card-glow">
+        <div class="project-card card-glow scroll-reveal" data-category="ai">
           <div class="project-image">
             <div class="project-icon-box"><i class="fa-solid fa-truck-ramp-box"></i></div>
           </div>
@@ -276,7 +289,7 @@
         </div>
 
         <!-- Project 5 -->
-        <div class="project-card card-glow">
+        <div class="project-card card-glow scroll-reveal delay-1" data-category="web">
           <div class="project-image">
             <div class="project-icon-box"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
           </div>
@@ -302,12 +315,12 @@
   <!-- Skills Section -->
   <section id="skills" class="section bg-alt">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header scroll-reveal">
         <span class="section-tag">Expertise</span>
-        <h2 class="section-title">Technical Skills</h2>
+        <h2 class="section-title">Technical Skill Matrix</h2>
       </div>
       <div class="skills-wrapper">
-        <div class="skills-category">
+        <div class="skills-category card-glow scroll-reveal">
           <h3><i class="fa-solid fa-code"></i> Languages</h3>
           <div class="skills-list">
             <div class="skill-item"><span>C</span></div>
@@ -320,7 +333,7 @@
           </div>
         </div>
 
-        <div class="skills-category">
+        <div class="skills-category card-glow scroll-reveal delay-1">
           <h3><i class="fa-solid fa-layer-group"></i> Frameworks & Libs</h3>
           <div class="skills-list">
             <div class="skill-item"><span>React.js</span></div>
@@ -331,18 +344,18 @@
           </div>
         </div>
 
-        <div class="skills-category">
-          <h3><i class="fa-solid fa-database"></i> Databases & Storage</h3>
+        <div class="skills-category card-glow scroll-reveal delay-2">
+          <h3><i class="fa-solid fa-database"></i> Databases</h3>
           <div class="skills-list">
             <div class="skill-item"><span>MongoDB</span></div>
             <div class="skill-item"><span>PostgreSQL</span></div>
           </div>
         </div>
 
-        <div class="skills-category">
+        <div class="skills-category card-glow scroll-reveal">
           <h3><i class="fa-solid fa-gears"></i> DevOps & Tools</h3>
           <div class="skills-list">
-            <div class="skill-item"><span>AWS (EC2, S3, IAM, VPC)</span></div>
+            <div class="skill-item"><span>AWS Cloud</span></div>
             <div class="skill-item"><span>Git & GitHub</span></div>
             <div class="skill-item"><span>Linux</span></div>
             <div class="skill-item"><span>N8N Workflows</span></div>
@@ -357,41 +370,45 @@
   <!-- Competitive Programming Section -->
   <section id="competitive" class="section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">CP Stats</span>
+      <div class="section-header scroll-reveal">
+        <span class="section-tag">Metrics</span>
         <h2 class="section-title">Competitive Programming</h2>
       </div>
       <div class="stats-grid">
-        <div class="stat-card card-glow LeetCode">
+        <div class="stat-card card-glow LeetCode scroll-reveal">
           <div class="stat-header">
             <h3>LeetCode</h3>
-            <span class="stat-badge">Top 13%</span>
+            <span class="stat-badge">Top 13% Globally</span>
           </div>
-          <div class="stat-number">1705</div>
+          <div class="stat-number-wrapper">
+            <span class="stat-number">1705</span>
+          </div>
           <div class="stat-label">Max Rating</div>
           <div class="stat-details">
-            <p><i class="fa-solid fa-check"></i> Solved: <strong>600+</strong></p>
-            <p><i class="fa-solid fa-award"></i> Badges: <strong>3</strong></p>
-            <p><i class="fa-solid fa-trophy"></i> Highest Rank: <strong>2245</strong></p>
+            <p><span><i class="fa-solid fa-circle-check"></i> Solved:</span> <strong>600+</strong></p>
+            <p><span><i class="fa-solid fa-award"></i> Badges:</span> <strong>3</strong></p>
+            <p><span><i class="fa-solid fa-trophy"></i> Highest Rank:</span> <strong>2245</strong></p>
           </div>
         </div>
 
-        <div class="stat-card card-glow CodeChef">
+        <div class="stat-card card-glow CodeChef scroll-reveal delay-1">
           <div class="stat-header">
             <h3>CodeChef</h3>
             <span class="stat-badge">2 Star</span>
           </div>
-          <div class="stat-number">1519</div>
+          <div class="stat-number-wrapper">
+            <span class="stat-number">1519</span>
+          </div>
           <div class="stat-label">Max Rating</div>
           <div class="stat-details">
-            <p><i class="fa-solid fa-check"></i> Solved: <strong>589</strong></p>
-            <p><i class="fa-solid fa-globe"></i> Global Rank: <strong>25,683</strong></p>
-            <p><i class="fa-solid fa-trophy"></i> Highest Rank: <strong>400</strong> (Starters)</p>
+            <p><span><i class="fa-solid fa-circle-check"></i> Solved:</span> <strong>589</strong></p>
+            <p><span><i class="fa-solid fa-globe"></i> Global Rank:</span> <strong>25,683</strong></p>
+            <p><span><i class="fa-solid fa-trophy"></i> Highest Rank:</span> <strong>400</strong></p>
           </div>
         </div>
       </div>
 
-      <div class="certifications-box">
+      <div class="certifications-box card-glow scroll-reveal">
         <h3>Certifications & Courses</h3>
         <div class="cert-grid">
           <div class="cert-item"><i class="fa-solid fa-certificate"></i> Hackerrank - Python basics (2024)</div>
@@ -407,43 +424,43 @@
   <!-- Achievements Section -->
   <section id="achievements" class="section bg-alt">
     <div class="container">
-      <div class="section-header">
-        <span class="section-tag">Accomplishments</span>
-        <h2 class="section-title">Hackathons & Trophies</h2>
+      <div class="section-header scroll-reveal">
+        <span class="section-tag">Honors</span>
+        <h2 class="section-title">Hackathon Victories</h2>
       </div>
       <div class="achievements-grid">
-        <div class="ach-card card-glow">
-          <span class="ach-rank rank-1">1st</span>
+        <div class="ach-card card-glow scroll-reveal">
+          <span class="ach-rank rank-1"><i class="fa-solid fa-trophy"></i> 1st</span>
           <h4>Codewars 2.0</h4>
           <p>Park Institutions</p>
         </div>
-        <div class="ach-card card-glow">
-          <span class="ach-rank rank-1">1st</span>
+        <div class="ach-card card-glow scroll-reveal delay-1">
+          <span class="ach-rank rank-1"><i class="fa-solid fa-trophy"></i> 1st</span>
           <h4>Code Xtream</h4>
           <p>KIT CBE</p>
         </div>
-        <div class="ach-card card-glow">
-          <span class="ach-rank rank-1">1st</span>
+        <div class="ach-card card-glow scroll-reveal delay-2">
+          <span class="ach-rank rank-1"><i class="fa-solid fa-trophy"></i> 1st</span>
           <h4>Hacksmart</h4>
           <p>KIT CBE</p>
         </div>
-        <div class="ach-card card-glow">
-          <span class="ach-rank rank-1">1st</span>
+        <div class="ach-card card-glow scroll-reveal">
+          <span class="ach-rank rank-1"><i class="fa-solid fa-trophy"></i> 1st</span>
           <h4>Web Wars</h4>
           <p>Hindustan Institutions</p>
         </div>
-        <div class="ach-card card-glow">
-          <span class="ach-rank rank-1">1st</span>
+        <div class="ach-card card-glow scroll-reveal delay-1">
+          <span class="ach-rank rank-1"><i class="fa-solid fa-trophy"></i> 1st</span>
           <h4>Web Wizards</h4>
           <p>RVS Institutions</p>
         </div>
-        <div class="ach-card card-glow">
-          <span class="ach-rank rank-2">2nd</span>
+        <div class="ach-card card-glow scroll-reveal delay-2">
+          <span class="ach-rank rank-2"><i class="fa-solid fa-trophy"></i> 2nd</span>
           <h4>Krypto Bytes</h4>
           <p>Ramakrishna Institutions</p>
         </div>
-        <div class="ach-card card-glow">
-          <span class="ach-rank rank-3">3rd</span>
+        <div class="ach-card card-glow scroll-reveal">
+          <span class="ach-rank rank-3"><i class="fa-solid fa-trophy"></i> 3rd</span>
           <h4>Hack the Rucks 2.0</h4>
           <p>Amrita University</p>
         </div>
@@ -454,23 +471,23 @@
   <!-- Volunteering Section -->
   <section id="volunteering" class="section">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header scroll-reveal">
         <span class="section-tag">Community</span>
-        <h2 class="section-title">Volunteering</h2>
+        <h2 class="section-title">Volunteering & Leadership</h2>
       </div>
       <div class="volunteer-grid">
-        <div class="vol-card card-glow">
-          <i class="fa-solid fa-users"></i>
+        <div class="vol-card card-glow scroll-reveal">
+          <div class="vol-icon-wrapper"><i class="fa-solid fa-users"></i></div>
           <h4>Plagiarism Awareness</h4>
           <p>Conducted plagiarism awareness program for junior (1st year) students.</p>
         </div>
-        <div class="vol-card card-glow">
-          <i class="fa-solid fa-chalkboard-user"></i>
+        <div class="vol-card card-glow scroll-reveal delay-1">
+          <div class="vol-icon-wrapper"><i class="fa-solid fa-chalkboard-user"></i></div>
           <h4>Peer Teaching</h4>
           <p>Taught C++, GitHub, and Competitive Programming basics to junior students with hands-on practice.</p>
         </div>
-        <div class="vol-card card-glow">
-          <i class="fa-solid fa-calendar-check"></i>
+        <div class="vol-card card-glow scroll-reveal delay-2">
+          <div class="vol-icon-wrapper"><i class="fa-solid fa-calendar-check"></i></div>
           <h4>UDHAYAM Organizing</h4>
           <p>Coordinated symposium events during college cultural event UDHAYAM.</p>
         </div>
@@ -481,12 +498,12 @@
   <!-- Contact Section -->
   <section id="contact" class="section bg-alt">
     <div class="container">
-      <div class="section-header">
+      <div class="section-header scroll-reveal">
         <span class="section-tag">Get in touch</span>
         <h2 class="section-title">Connect With Me</h2>
       </div>
       <div class="contact-grid">
-        <div class="contact-info">
+        <div class="contact-info scroll-reveal">
           <h3>Let's collaborate on your next project</h3>
           <p>Feel free to reach out to me for freelance projects, internship opportunities, or code collaborations.</p>
           <div class="contact-details">
@@ -514,7 +531,7 @@
           </div>
         </div>
         
-        <div class="contact-form card-glow">
+        <div class="contact-form card-glow scroll-reveal delay-1">
           <form id="feedback-form" onsubmit="event.preventDefault(); alert('Message sent successfully! (Demo Mode)');">
             <div class="form-group">
               <label for="name">Your Name</label>
@@ -528,7 +545,7 @@
               <label for="message">Message</label>
               <textarea id="message" rows="4" required placeholder="Tell me about your project..."></textarea>
             </div>
-            <button type="submit" class="btn-primary form-submit">Send Message <i class="fa-solid fa-paper-plane"></i></button>
+            <button type="submit" class="btn-primary form-submit glow-button">Send Message <i class="fa-solid fa-paper-plane"></i></button>
           </form>
         </div>
       </div>

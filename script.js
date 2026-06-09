@@ -40,7 +40,7 @@ mobileNavToggle.addEventListener('click', () => {
     navLinksContainer.style.display = 'flex';
     navLinksContainer.style.flexDirection = 'column';
     navLinksContainer.style.position = 'absolute';
-    navLinksContainer.style.top = '80px';
+    navLinksContainer.style.top = '85px';
     navLinksContainer.style.left = '0';
     navLinksContainer.style.width = '100%';
     navLinksContainer.style.background = 'var(--bg-color)';
@@ -72,7 +72,7 @@ window.addEventListener('scroll', () => {
   sections.forEach(section => {
     const sectionTop = section.offsetTop;
     const sectionHeight = section.clientHeight;
-    if (pageYOffset >= (sectionTop - 150)) {
+    if (pageYOffset >= (sectionTop - 160)) {
       current = section.getAttribute('id');
     }
   });
@@ -108,11 +108,11 @@ if (typewriterSpan) {
 
     if (!isDeleting && charIndex === currentWord.length) {
       isDeleting = true;
-      delay = 1500; // Pause at full word
+      delay = 2000; // Pause at full word
     } else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       wordIndex = (wordIndex + 1) % words.length;
-      delay = 500; // Pause before typing next word
+      delay = 600; // Pause before typing next word
     }
 
     setTimeout(type, delay);
@@ -123,3 +123,113 @@ if (typewriterSpan) {
     setTimeout(type, 1000);
   });
 }
+
+// Particle System
+const canvas = document.getElementById('particles-canvas');
+const ctx = canvas.getContext('2d');
+
+let particlesArray = [];
+const numberOfParticles = 45;
+
+// Set canvas dimensions
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+}
+resizeCanvas();
+window.addEventListener('resize', resizeCanvas);
+
+// Particle class
+class Particle {
+  constructor() {
+    this.x = Math.random() * canvas.width;
+    this.y = Math.random() * canvas.height;
+    this.size = Math.random() * 2 + 1;
+    this.speedX = Math.random() * 0.4 - 0.2;
+    this.speedY = Math.random() * 0.4 - 0.2;
+    this.opacity = Math.random() * 0.5 + 0.1;
+  }
+  update() {
+    this.x += this.speedX;
+    this.y += this.speedY;
+
+    // Bounce off walls
+    if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX;
+    if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
+  }
+  draw() {
+    const isDark = !document.body.classList.contains('light-theme');
+    ctx.fillStyle = isDark ? `rgba(139, 92, 246, ${this.opacity})` : `rgba(59, 130, 246, ${this.opacity})`;
+    ctx.beginPath();
+    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+    ctx.fill();
+  }
+}
+
+function initParticles() {
+  particlesArray = [];
+  for (let i = 0; i < numberOfParticles; i++) {
+    particlesArray.push(new Particle());
+  }
+}
+initParticles();
+
+function animateParticles() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  for (let i = 0; i < particlesArray.length; i++) {
+    particlesArray[i].update();
+    particlesArray[i].draw();
+  }
+  requestAnimationFrame(animateParticles);
+}
+animateParticles();
+
+// Project Filter Logic
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    // Remove active class from all buttons
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const filterValue = button.getAttribute('data-filter');
+
+    projectCards.forEach(card => {
+      if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+        card.style.display = 'flex';
+        setTimeout(() => {
+          card.style.opacity = '1';
+          card.style.transform = 'scale(1)';
+        }, 10);
+      } else {
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.85)';
+        setTimeout(() => {
+          card.style.display = 'none';
+        }, 300);
+      }
+    });
+  });
+});
+
+// Scroll Reveal Effect using Intersection Observer
+const revealElements = document.querySelectorAll('.scroll-reveal');
+const observerOptions = {
+  root: null,
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active-reveal');
+      // Once revealed, no need to observe again
+      observer.unobserve(entry.target);
+    }
+  });
+}, observerOptions);
+
+revealElements.forEach(el => observer.observe(el));
