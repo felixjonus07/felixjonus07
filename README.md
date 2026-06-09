@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&size=22&duration=2500&pause=800&color=3B82F6&center=true&vCenter=true&width=500&lines=Hi+there%2C+I'm+Felix!;Full-Stack+Freelancer;AI+%26+RAG+Developer;AWS+%26+DevOps+Practitioner" alt="Typing SVG" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&size=22&duration=2500&pause=800&color=3B82F6&center=true&vCenter=true&width=500&lines=Hi+there%2C+I'm+Felix!;Full-Stack+Freelancer;AI+%26+RAG+Developer;DevOps+Enthusiast" alt="Typing SVG" />
 </p>
 
 <p align="center">
@@ -22,8 +22,8 @@
 ## Quick Overview
 
 - **Education:** 2nd Year B.Tech AI & Data Science student at KIT (CGPA: 8.13/10.0).
-- **Experience:** Completed 5 freelance projects spanning MERN, Django, and Rust, and an AWS/DevOps internship with hands-on EC2, S3, IAM, VPC experience.
-- **Core Interests:** Cloud Architecture, Automated AI Workflows, Intrusion Detection Systems, and Rust systems programming.
+- **Experience:** Completed 5 freelance projects spanning MERN, Django, and Rust, and a DevOps internship with hands-on network orchestration, user access management, and CLI automation.
+- **Core Interests:** Distributed Systems, Automated AI Workflows, Intrusion Detection Systems, and Rust systems programming.
 
 ---
 
@@ -62,7 +62,7 @@
   <tr>
     <td align="center"><b>DevOps & Tools</b></td>
     <td>
-      <img src="https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazon-aws&logoColor=white" alt="AWS" />
+      <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white" alt="Docker" />
       <img src="https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white" alt="Git" />
       <img src="https://img.shields.io/badge/GitHub-181717?style=flat&logo=github&logoColor=white" alt="GitHub" />
       <img src="https://img.shields.io/badge/Linux-FCC624?style=flat&logo=linux&logoColor=black" alt="Linux" />
