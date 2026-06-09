@@ -3,6 +3,7 @@
     <img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&weight=700&size=38&duration=3000&pause=1500&color=3B82F6&center=true&vCenter=true&width=500&lines=Felix+Jonus+I" alt="Felix Jonus I" />
   </a>
 </h1>
+
 <p align="center">
   <b>B.Tech in Artificial Intelligence & Data Science Student | Full-Stack Developer | DevOps Enthusiast</b>
 </p>
@@ -90,11 +91,9 @@
 
 ## Competitive Programming & Certifications
 
-<p align="left">
-  <a href="https://leetcode.com/u/felixjonus_07"><img src="https://img.shields.io/badge/LeetCode-Max%20Rating%201705-FFA116?style=flat-square&logo=leetcode&logoColor=white" /></a>
-  <a href="https://leetcode.com/u/felixjonus_07"><img src="https://img.shields.io/badge/LeetCode-Top%2013%25-blue?style=flat-square&logo=leetcode" /></a>
-  <a href="https://codolio.com/profile/kit28ada044"><img src="https://img.shields.io/badge/Codolio-Profile-8b5cf6?style=flat-square" /></a>
-</p>
+[![LeetCode Rating](https://img.shields.io/badge/LeetCode-Max%20Rating%201705-FFA116?style=flat-square&logo=leetcode&logoColor=white)](https://leetcode.com/u/felixjonus_07)
+[![LeetCode Percentile](https://img.shields.io/badge/LeetCode-Top%2013%25-blue?style=flat-square&logo=leetcode)](https://leetcode.com/u/felixjonus_07)
+[![Codolio Profile](https://img.shields.io/badge/Codolio-Profile-8b5cf6?style=flat-square)](https://codolio.com/profile/kit28ada044)
 
 * **LeetCode:** 600+ solved problems. Top 13% globally. Highest contest rank: 2245. Profile link: [leetcode.com/u/felixjonus_07](https://leetcode.com/u/felixjonus_07)
 * **CodeChef:** 589 solved problems. Division 3 contest rank: 400. Profile via Codolio: [codolio.com/profile/kit28ada044](https://codolio.com/profile/kit28ada044)
@@ -118,5 +117,7 @@
 </p>
 
 <p align="center">
-  <a href="https://leetcode.com/u/felixjonus_07"><img src="https://leetcode-stats-six.vercel.app/?username=felixjonus07&theme=dark" alt="LeetCode Stats" /></a>
+  <a href="https://leetcode.com/u/felixjonus_07">
+    <img src="https://leetcode-stats-six.vercel.app/?username=felixjonus07&theme=dark" alt="LeetCode Stats" />
+  </a>
 </p>
