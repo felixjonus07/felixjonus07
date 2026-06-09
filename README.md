@@ -113,11 +113,15 @@
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=felixjonus07&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" width="48%" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=felixjonus07&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="48%" />
+  <img src="https://streak-stats.demolab.com/?user=felixjonus07&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="48%" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=felixjonus07&theme=tokyo-night&hide_border=true" alt="GitHub Activity Graph" width="96%" />
 </p>
 
 <p align="center">
   <a href="https://leetcode.com/u/felixjonus_07">
-    <img src="https://leetcode-stats-six.vercel.app/?username=felixjonus07&theme=dark" alt="LeetCode Stats" />
+    <img src="https://leetcard.netlify.app/?username=felixjonus_07&theme=dark&font=baloo_2" alt="LeetCode Stats" />
   </a>
 </p>
