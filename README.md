@@ -1,4 +1,8 @@
-<h1 align="center">Felix Jonus I</h1>
+<h1 align="center">
+  <a href="https://github.com/felixjonus07">
+    <img src="https://readme-typing-svg.herokuapp.com?font=Space+Grotesk&weight=700&size=38&duration=3000&pause=1500&color=3B82F6&center=true&vCenter=true&width=500&lines=Felix+Jonus+I" alt="Felix Jonus I" />
+  </a>
+</h1>
 <p align="center">
   <b>B.Tech in Artificial Intelligence & Data Science Student | Full-Stack Developer | DevOps Enthusiast</b>
 </p>
