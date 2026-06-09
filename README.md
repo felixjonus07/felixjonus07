@@ -122,6 +122,6 @@
 
 <p align="center">
   <a href="https://leetcode.com/u/felixjonus_07">
-    <img src="https://leetcard.netlify.app/?username=felixjonus_07&theme=dark&font=baloo_2" alt="LeetCode Stats" />
+    <img src="https://leetcard.jacoblin.cool/felixjonus_07?theme=dark&font=Baloo+2&ext=heatmap" alt="LeetCode Stats" />
   </a>
 </p>
