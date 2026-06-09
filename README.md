@@ -114,5 +114,5 @@
 </p>
 
 <p align="center">
-  <a href="https://leetcode.com/u/felixjonus_07"><img src="https://github-readme-leetcode.vercel.app/api?username=kit28ada052&theme=dark" alt="LeetCode Stats" /></a>
+  <a href="https://leetcode.com/u/felixjonus_07"><img src="https://leetcode-stats-six.vercel.app/?username=kit28ada052&theme=dark" alt="LeetCode Stats" /></a>
 </p>
