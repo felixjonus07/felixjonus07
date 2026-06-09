@@ -159,7 +159,7 @@ Engineered a high-throughput, Harry Potter-themed booking & payment portal servi
 
 <p align="center">
   <a href="https://leetcode.com/u/felixjonus_07">
-    <img src="https://leetcard.jacoblin.cool/felixjonus_07?theme=dark&font=Baloo+2&ext=heatmap" alt="LeetCode Stats" />
+    <img src="https://leetcard.jacoblin.cool/felixjonus_07?theme=dark&font=Baloo+2&ext=contest" alt="LeetCode Stats" />
   </a>
 </p>
 
