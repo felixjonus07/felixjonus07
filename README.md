@@ -157,6 +157,12 @@ Engineered a high-throughput, Harry Potter-themed booking & payment portal servi
 * **CodeChef:** 589 solved problems. Division 3 contest rank: 400. Profile via Codolio: [codolio.com/profile/kit28ada044](https://codolio.com/profile/kit28ada044)
 * **Certifications:** GUVI Big Data (2025), NPTEL DSA Design (2025), NPTEL Problem Solving in C (2025), Java Introduction (2023).
 
+<p align="center">
+  <a href="https://leetcode.com/u/felixjonus_07">
+    <img src="https://leetcard.jacoblin.cool/felixjonus_07?theme=dark&font=Baloo+2&ext=heatmap" alt="LeetCode Stats" />
+  </a>
+</p>
+
 ---
 
 ## Key Achievements
@@ -178,8 +184,3 @@ Engineered a high-throughput, Harry Potter-themed booking & payment portal servi
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=felixjonus07&theme=tokyo-night&hide_border=true" alt="GitHub Activity Graph" width="96%" />
 </p>
 
-<p align="center">
-  <a href="https://leetcode.com/u/felixjonus_07">
-    <img src="https://leetcard.jacoblin.cool/felixjonus_07?theme=dark&font=Baloo+2&ext=heatmap" alt="LeetCode Stats" />
-  </a>
-</p>
