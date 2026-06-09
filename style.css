@@ -1346,3 +1346,11 @@ footer {
   0% { transform: translateY(0); }
   100% { transform: translateY(-6px); }
 }
+
+/* Stat card image hover scaling */
+.stat-card img {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.stat-card:hover img {
+  transform: scale(1.04);
+}

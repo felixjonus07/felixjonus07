@@ -112,3 +112,7 @@
   <img src="https://github-readme-stats.vercel.app/api?username=felixjonus07&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" width="48%" />
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=felixjonus07&theme=tokyonight&hide_border=true" alt="GitHub Streak" width="48%" />
 </p>
+
+<p align="center">
+  <a href="https://leetcode.com/u/felixjonus_07"><img src="https://github-readme-leetcode.vercel.app/api?username=kit28ada052&theme=dark" alt="LeetCode Stats" /></a>
+</p>
